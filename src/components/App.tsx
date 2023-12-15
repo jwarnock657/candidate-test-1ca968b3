@@ -1,8 +1,15 @@
 import React from "react";
 import logo from "../logo.svg";
 import styles from "./App.module.scss";
+import Content from "components";
 
-// Character list is available in the public directory
+export interface Character {
+  name: string;
+  category: string;
+  description: string;
+  significanceIndex: number;
+  avatar: string;
+}
 
 export function App() {
   return (
@@ -13,7 +20,7 @@ export function App() {
       </header>
 
       <section className="App-content">
-        {/* Lovely character list goes here */}
+        <Content />
       </section>
     </div>
   );
